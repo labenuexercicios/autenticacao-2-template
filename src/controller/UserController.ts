@@ -8,9 +8,13 @@ export class UserController {
     ) {}
 
     public getUsers = async (req: Request, res: Response) => {
+
+        const token = req.headers.authorization
+
         try {
             const input: GetUsersInput = {
-                q: req.query.q
+                q: req.query.q,
+                token: req.headers.authorization
             }
 
             const output = await this.userBusiness.getUsers(input)
@@ -29,6 +33,7 @@ export class UserController {
                 res.send("Erro inesperado")
             }
         }
+        return token
     }
 
     public signup = async (req: Request, res: Response) => {
