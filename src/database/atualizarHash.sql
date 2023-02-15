@@ -1,4 +1,4 @@
--- Active: 1676371785960@@127.0.0.1@3306
+-- Active: 1676456424549@@127.0.0.1@3306
 
 -- atualizar senhas para hashes bcrypt
 -- (NÃO RODAR ANTES DA PRÁTICA 3 SER FINALIZADA)
